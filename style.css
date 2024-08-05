@@ -1,0 +1,178 @@
+/* * RESET * */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik:wght@900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  cursor: default;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GENERAL */
+
+/* body {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  padding-inline: 2rem;
+  place-items: center;
+} */
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.music-player{
+  background: #ffe0e5;
+  width: 400px;
+  padding: 25px 35px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+nav .circle{
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  color: #fb3192;
+  box-shadow: 0 5px 10px rgba(256, 26, 26, 0.22);
+}
+
+.song-img{
+  width: 220px;
+  border-radius: 50%; 
+  border: 8px solid #fff;
+  box-shadow: 0 10px 60px rgba(256, 26, 26, 0.22);
+}
+
+.music-player h1{
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+  margin-top: 20px;
+}
+
+.music-player p{
+  font-size: 14px;
+}
+
+#progress{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #f53192;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 40px 0;
+}
+
+#progress::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  background: #f53192;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 8px solid #fff;
+  box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+
+.controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls div{
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fb3192;
+  box-shadow: 0 10px 20px rgba(225, 26, 26, 0.22);
+  cursor: pointer;
+}
+
+.controls div:nth-child(2){
+  transform: scale(1.5);
+  background: #f53192;
+  color: #fff;
+}
+
+
+
